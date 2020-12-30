@@ -28,4 +28,4 @@ My projects:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~ attributed to Albert Einstein
 
 ## Course Materials
-The textbook for this course is [Modeling and Simulation in Python by Allen B. Downey](http://greenteapress.com/modsimpy/ModSimPy3.pdf).
+The textbook for this course is [Modeling and Simulation in Python](http://greenteapress.com/modsimpy/ModSimPy3.pdf) by Allen B. Downey.
