@@ -1,0 +1,31 @@
+Growth Mindset
+Abstraction
+Computational Essays
+
+Projects
+1. Bikeshare/transportation systems
+2. Global Energy balance
+3. Mechanical systems
+
+Assessment - "engagement"
+(library course reserves)
+
+finish downloading software, chapters 0.5-0.7?
+Go to the matlab/python tutorial
+
+- make predictions
+- explain behavior
+- evaluate design decisions
+
+Beer game
+- customer demand fluctuates
+- order amounts
+- retailer system, no backorder
+- time != product, delay tends to cause inflation
+- why do we even have wholesaler and the other one?
+	cutting them out would be more effective
+
+Python: Libraries for data science, 
+	machine learning, visualization, etc.
+
+CoCalc Jupyter Anaconda Python + Libraries

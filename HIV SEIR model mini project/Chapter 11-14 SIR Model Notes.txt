@@ -1,0 +1,122 @@
+SIR model
+https://www.maa.org/press/periodicals/loci/joma/the-sir-model-for-spread-of-disease
+
+stocks:
+s = Susceptible
+i = Infectious
+r = Recovered
+
+flows:
+infections - rate = beta
+recoveries - rate = gamma
+
+gamma*i*N = recoveries per day
+beta*s*i*N = become infected per day
+
+no arrivals or departures
+
+ds/dt = - beta*s*i
+di/dt = beta*s*i - gamma*i
+dr/dt = gamma*i
+
+"stocks" = compartments / categories
+"flows" = moving between them
+
+
+init = State(S=89, I=1, R=0)
+And then convert the numbers to fractions by dividing by the total:
+init /= sum(init)
+
+
+For now, let’s assume we know the time between contacts and time between
+recoveries:
+tc = 3 # time between contacts in days
+tr = 4 # recovery time in days
+We can use them to compute the parameters of the model:
+beta = 1 / tc # contact rate in per day
+gamma = 1 / tr # recovery rate in per day
+(later can use best fit data)
+
+def update_func(state, t, system):
+s, i, r = state
+infected = system.beta * i * s
+recovered = system.gamma * i
+s -= infected
+i += infected - recovered
+r += recovered
+return State(S=s, I=i, R=r)
+
+def run_simulation(system, update_func):
+S = TimeSeries()
+I = TimeSeries()
+R = TimeSeries()
+state = system.init
+t0 = system.t0
+S[t0], I[t0], R[t0] = state
+for t in linrange(system.t0, system.t_end):
+state = update_func(state, t, system)
+S[t+1], I[t+1], R[t+1] = state
+return S, I, R
+
+system = make_system(beta, gamma)
+S, I, R = run_simulation(system, update_func)
+
+
+def plot_results(S, I, R):
+plot(S, '--', label='Susceptible')
+plot(I, '-', label='Infected')
+plot(R, ':', label='Resistant')
+decorate(xlabel='Time (days)',
+ylabel='Fraction of population')
+
+plot_results(S, I, R)
+
+TimeFrame
+DataFrame
+
+def run_simulation(system, update_func):
+frame = TimeFrame(columns=system.init.index)
+frame.row[system.t0] = system.init
+for t in linrange(system.t0, system.t_end):
+frame.row[t+1] = update_func(frame.row[t], system)
+return frame
+
+results = run_simulation(system, update_func)
+plot_results(results.S, results.I, results.R)
+
+
+def calc_total_infected(results, system):
+return results.S[system.t0] - results.S[system.t_end]
+
+largest_value = S.max()
+time_of_largest_value = S.idxmax()
+
+http://modsimpy.com/series
+
+def add_immunization(system, fraction):
+system.init.S -= fraction
+system.init.R += fraction
+
+system2 = make_system(beta, gamma)
+add_immunization(system2, 0.1)
+results2 = run_simulation(system2, update_func)
+
+def sweep_immunity(immunize_array):
+sweep = SweepSeries()
+for fraction in immunize_array:
+sir = make_system(beta, gamma)
+add_immunization(sir, fraction)
+results = run_simulation(sir, update_func)
+sweep[fraction] = calc_total_infected(results, sir)
+return sweep
+
+
+
+
+----
+
+
+nondimensionalization (see http://modsimpy.com/nondim).
+
+
+
