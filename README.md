@@ -11,7 +11,7 @@ ModSim is a python based first-year Olin course in which I learned about how to 
 - Use Python to implement models, run simulations, work with data, and generate visualizations
 - Communicate technical and quantitative information effectively in several modes (e.g., written, spoken, graphical)
 - Work effectively with a variety of teammates and in a variety of roles (e.g., “driver/navigator” in pair programming)
-- Be a critical consumer of models (e.g., assess models encountered, evaluate whether appropriate/useful for given purpose)
+- Be a critical consumer (e.g., assess models encountered, evaluate whether appropriate/useful for given purpose)
 - Understand the opportunities and responsibilities involved in creating and using models
 
 ## Modeling Mantras:
