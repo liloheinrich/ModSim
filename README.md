@@ -6,12 +6,12 @@ ModSim is a python based first-year Olin course in which I learned about how to 
 
 - Create models of different kinds of systems (e.g., transportation systems, thermal systems, mechanical systems) 
 - Use multiple kinds of appropriate abstractions (e.g., free-body diagrams, stock-and-flow diagrams, differential equations) 
-- Validate the predictions of your models using different approaches (e.g., estimation, physical laws, analytical solutions)
+- Validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions)
 - Use your models to do useful work (e.g., make predictions, explain behavior, evaluate design decisions)
 - Use Python to implement models, run simulations, work with data, and generate visualizations
 - Communicate technical and quantitative information effectively in several modes (e.g., written, spoken, graphical)
 - Work effectively in teams with a variety of teammates and in a variety of roles (e.g., “driver” and “navigator” while pair programming)
-- Be a critical consumer of models (e.g., assessing a model that you encounter, evaluating whether it is appropriate and useful for a given purpose)
+- Be a critical consumer of models (e.g., assess models you encounter, evaluate whether appropriate and useful for a given purpose)
 - Understand the opportunities and responsibilities involved in creating and using models
 
 ## Modeling Mantras:
