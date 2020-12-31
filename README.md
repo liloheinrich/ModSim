@@ -4,9 +4,9 @@ ModSim is a python based first-year Olin course in which I learned about how to 
 
 My projects:
 
-- [Lunch Time in the Olin dining hall](https://github.com/liloheinrich/ModSim/blob/main/Best%20Assignments/Project%201%20Lunch%20Time!%20Bahar%20and%20Lilo.pdf)
-- How much can [global sea level rise](https://github.com/liloheinrich/ModSim/blob/main/Best%20Assignments/Project%202%20Sea%20Level%20Presentation.pdf) be mitigated by CO2 emission reduction?
-- Creating a [glider flight simulation](https://github.com/liloheinrich/ModSim/blob/main/Best%20Assignments/Project%203%20Glider%20Flight%20Presentation.pdf) 
+- [Lunch Time in the Olin dining hall](https://github.com/liloheinrich/ModSim/blob/main/Project%201%20Lunch%20Time/Project%201%20Lunch%20Time!%20Bahar%20and%20Lilo.pdf)
+- How much can [global sea level rise](https://github.com/liloheinrich/ModSim/blob/main/Project%202%20Sea%20Level/Project%202%20Sea%20Level%20Presentation.pdf) be mitigated by CO2 emission reduction?
+- Creating a [glider flight simulation](https://github.com/liloheinrich/ModSim/blob/main/Project%203%20Glider%20Flight/Project%203%20Glider%20Flight%20Presentation.pdf) 
 
 ## Course goals:
 
