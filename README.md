@@ -1,4 +1,4 @@
-# Modelling &amp; Simulation (ModSim) Coursework
+# Modeling &amp; Simulation (ModSim) Coursework
 
 ModSim is a python based first-year Olin course in which I learned about how to abstract and model physical systems. For this course I completed 7 worksheets, 3 projects, and 2 mini-projects that are guided investigations into Orbital Mechanics and modelling the muliplication of HIV cells using the SEIR model.
 
